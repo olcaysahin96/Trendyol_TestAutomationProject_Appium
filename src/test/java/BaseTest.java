@@ -4,10 +4,8 @@ import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
 
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     public AppiumDriver driver;
@@ -24,7 +22,6 @@ public class BaseTest {
             cap.setCapability("appPackage", "com.example.qaotomation");
             cap.setCapability("appActivity", "com.example.qaotomation.MainActivity");
             driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         }catch (Exception e){
             e.printStackTrace();
         }

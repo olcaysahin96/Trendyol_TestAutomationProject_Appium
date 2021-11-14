@@ -15,7 +15,6 @@ public class RegisterTest extends BaseTest{
         registerPage.getRePassword("12345678");
         registerPage.clickSignUpUserButton();
         Assert.assertTrue(registerPage.successRegisterText().contains("Başarılı şekilde kayıt oldun."));
-
     }
 
     @Test (description = "Bos Email bos parola validasyon kontrolü", priority = 2)

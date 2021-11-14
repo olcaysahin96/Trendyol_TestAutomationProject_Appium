@@ -9,6 +9,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 import static java.time.Duration.ofMillis;
 
 public class BasePage {
@@ -50,6 +52,7 @@ public class BasePage {
                 .perform();
     }
 
-
-
+    public List<WebElement> getAllList(By locator){
+        return driver.findElements(locator);
+    }
 }

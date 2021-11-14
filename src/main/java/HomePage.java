@@ -88,36 +88,49 @@ public class HomePage extends BasePage{
     }
 
     protected boolean isDisplayedFirstBanner() {
+        checkBannerSize(firstBanner);
         return find(firstBanner).isDisplayed();
     }
     protected boolean isDisplayedSecondBanner() {
+        checkBannerSize(secondBanner);
         return find(secondBanner).isDisplayed();
     }
     protected boolean isDisplayedThirdBanner() {
+        checkBannerSize(thirdBanner);
         return find(thirdBanner).isDisplayed();
     }
     protected boolean isDisplayedFourthBanner() {
+        checkBannerSize(fourthBanner);
         return find(fourthBanner).isDisplayed();
     }
     protected boolean isDisplayedFifthBanner() {
+        checkBannerSize(fifthBanner);
         return find(fifthBanner).isDisplayed();
     }
     protected boolean isDisplayedSixthBanner() {
+        checkBannerSize(sixthBanner);
         return find(sixthBanner).isDisplayed();
     }
     protected boolean isDisplayedSeventhBanner() {
+        checkBannerSize(seventhBanner);
         return find(seventhBanner).isDisplayed();
     }
     protected boolean isDisplayedEighthBanner() {
+        checkBannerSize(eighthBanner);
         return find(eighthBanner).isDisplayed();
     }
     protected boolean isDisplayedNinthBanner() {
+        checkBannerSize(ninthBanner);
         return find(ninthBanner).isDisplayed();
     }
 
+    protected boolean checkBannerSize(By locator){
+         return getAllList(locator).size() > 0;
+    }
 
     protected void scrollDownPage(int xTimes) {
         for (int i=1; i<=xTimes; i++)
         scrollDown();
     }
+
 }
